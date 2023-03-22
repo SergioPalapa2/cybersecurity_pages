@@ -5,30 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>CC</title>
 </head>
 <body>
     <header>
         <h1>Apuntes ciberseguridad</h1>
     </header>
-    
-    <div class="main">
-        <div class="nav">
-            <h2>Temario</h2>
-            <ol>
-                <li>Introducción a la ciberseguridad</li>
-                    <ol>
-                        <li>El mundo de la ciberseguridad</li>
-                        <li>Datos de una organización</li>
-                        <li>Medidas ante ataques</li>
-                        <li>Ciberatacantes</li>
-                    </ol>
-                <li>Ataques, conceptos y técnicas</li>
-                <li>Protección de los datos y privacidad</li>
-                <li>Protección de la organización</li>
-            </ol>
-        </div>
+    <nav>
+        <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Inicio</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">1. Introduccion</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">2. Ataques, conceptos y tecnicas</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">3. Proteccion y privacidad</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">4. Proteccion de la organización</button>
+            </li>
+        </ul>
+    </nav>
 
+    <div class="main">
+        <br>
+        <nav>
+            <img src="images/bit_band.jpg" width="100%">
+        </nav>  
+        
+        
         <div class="content">
             <div class="topic1">
                 <h2>Introduccion a la ciberseguridad</h2>
@@ -125,17 +135,107 @@
                             <p>
                                 Es importante tener en cuenta la frecuencia de uso y acceso de datos personales mediante dispositivos inteligentes. Estos equipos pueden almacenar:
                                 <ul>
-                                    <li>Estados de cuenta</li>
+                                    <li>Copias de estados de cuenta</li>
                                     <li>Metadatos sobre uso y actividades.</li>
-
+                                    <li>Accesos a aplicaciones de banca en linea</li>
                                 </ul>
                             </p>
-                        <h4></h4>
-                        <h4></h4>
-                            
-                            
-                            
+                        <h4>¿Quien más quiere mis datos?</h4>
+                        <p>
+                            <ul>
+                                <li>Proveedor de intrernet</li>
+                                    <p>El ISP hace un seguimiento de la actividad en linea y en algunos paides esta se puede vender a anunciantes.</p>
+                                    <p>Por cuestiones legales o de seguridad un ISP puede verse obligado a entregar la data a agencias o autoridades gubernamentales.</p>
+                                <li>Anunciantes</li>
+                                    <p>La publicidad dirigida forma parte de la experiencia en internet. Los anunciantes monitorean y rastrean actividades en linea, como habitos de compra y preferencias personales; con el objetivo de mostrar anuncios personalizados.</p>
+
+                                <li>Motores de busqueda y redes sociales</li>
+                                    <p>Estas plataformas recopilan información sobre genero, geolocalización, numeros telefonicos e ideologias.</p>
+                                    <p>Esta informacion puede venderse a anunciantes con fines de lucro.</p>
+                                <li>Sitios web</li>
+                                    <p>Los sitios web utilizan cookies para rastrear actividades en los navegadores, con el fin de brindar experiencias personalizadas.</p>
+                                    <p>Este mecanismo deja rastros de las actividades en linea y puede terminar en manos de anunciantes.</p>
+                            </ul>
+                        </p>
                     <h3>Datos de una organización</h3>
+                        <h4>Tipos de datos de una organización</h4>
+                            <p>
+                               <ul>
+                                    <li>Datos tradicionales</li>
+                                    <p>
+                                        Estos datos suelen ser generados y mantenidos por todas las organizaciones. Ya sea grandes o pequeñas
+                                    </p>
+                                    <ul>
+                                        <li>Datos transaccionales: Información para la toma de desiciones de una empresa.</li>
+                                            <ul>
+                                                <li>Detalles de compra y venta</li>
+                                                <li>Actividades de producción</li>
+                                                <li>Operaciones organizativas básicas</li>
+                                            </ul>
+                                        <li>Propiedad intelectual: Informacion que se considera secreto comercial, ya que permite mantener una ventaja economica.</li>
+                                            <ul>
+                                                <li>Patentes</li>
+                                                <li>Marcas registradas</li>
+                                            </ul>
+                                        <li>Datos financieros: Datos que brindan informacio sobre el estado de la empresa</li>
+                                            <ul>
+                                                <li>Declaraciones de ingresos</li>
+                                                <li>Balances</li>
+                                                <li>Declaraciones de flujo de caja</li>
+                                            </ul>
+                                    </ul>
+                                    <li>Internet de las cosas y big data</li>
+                                        <p>IoT es una gran red de objetos fisicos, sensores, software y otro tipo de dispositivos. Todo conectado a internet y con la capacidad de recopilar y compartir datos.</p>
+                                        <p>Dado que las opciones de almacenamiento se han expandido ya a la nube, IoT ha tenido un crecimiento exponencial, surgiendo una nueva rama de estudio e investigacion llamada BIG DATA</p>
+                               </ul> 
+                            </p>
+                        <h4>El cubo</h4>
+                            <p>McCumber cube es una marco modelo (John McCumber-1991) creado para ayudar a las organizaciones a establecer y evaluar iniciativas de seguridad de la información, considerando todos los factores que las afectan.</p>
+                            <ol>
+                                <p>Dimensiones del modelom de seguridad</p>
+                                <li>Principios funamentales para proteger los sistemas de información</li>
+                                    <ul>
+                                        <li>Confidencialidad</li>
+                                            <p>Conjunto de reglas que evita que la información sensible sea revelada a personas no autorizadas, espacio de recursos y procesos.</p>
+                                            <ul>
+                                                <li>Cifrado de datos</li>
+                                                <li>Autenticación</li>
+                                                <li>Control de acceso</li>
+                                            </ul>
+                                        <li>Integridad</li>
+                                            <p>La integridad garantiza que la información o los procesos del sistema estén protegidos contra modificaciones intencionales o accidentales.</p>
+                                            <ul>
+                                                <li>Funcion hash</li>
+                                                <li>Suma de comprobación</li>
+                                            </ul>
+                                        <li>Disponibilidad</li>
+                                            <p>significa que los usuarios autorizados pueden acceder a los sistemas y datos cuando y donde sea necesario y aquellos que no cumplen con las condiciones establecidas, no lo son.</p>
+                                            <ul>
+                                                <li>Mantenimiento del equipo</li>
+                                                <li>Reparaciones de hardware</li>
+                                                <li>Manteniendo los sistemas operativos</li>
+                                                <li>Software actualizado.</li>
+                                                <li>Copias de seguridad</li>
+                                            </ul>
+                                    </ul>
+                                <li>La proteccion de la información en cada uno de sus estados posibles.</li>
+                                    <ul>
+                                        <li>Procesamiento</li>
+                                        <p>Datos que se utilizan para realizar una operación, como actualizaciones de registros en una base de datos(datos en proceso).</p>
+                                        <li>Almacenamiento</li>
+                                        <p>se refiere a los datos almacenados en la memoria o en un dispositivo de almacenamiento permanente, como un disco duro, una unidad de estado sólido o una unidad USB (datos en reposo).</p>
+                                        <li>Transmisión</li>
+                                        <p>La transmisión se refiere a los datos que viajan entre sistemas de información (datos en tránsito).</p>
+                                    </ul>
+                                <li>Medidas de seguridad utilizadas para proteger los datos.</li>
+                                    <p></p>
+                            </ol>
+                    
+                        <h4>Phishing</h4>
+                        <h4>Violaciones de seguridad de los datos y sus consecuencias</h4>
+                    
+
+                    <h3></h3>
 
             </div>
             
@@ -151,6 +251,6 @@
         
     </div>
     
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
